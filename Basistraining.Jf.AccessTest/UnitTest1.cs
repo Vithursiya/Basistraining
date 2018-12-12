@@ -21,7 +21,7 @@ namespace Basistraining.Jf.Common
 		[TestMethod]
 		public void CommonTest()
 		{
-			var p = Common.Person.getAll();
+			var p = Person.getAll();
 
 			Assert.IsNotNull(p);
 
@@ -35,8 +35,26 @@ namespace Basistraining.Jf.Common
 
         //List
 
-        //add
-                //laden-¨überprüfen
+        public void saveTest()
+        {
+            //Person
+            var person = new Person
+            {
+                FirstName = "Max",
+                LastName = "Muster"
+            };
 
+            using (var context = new SchoolEntities())
+            {
+                var personResultat = Person.Save();
+                Assert.IsNotNull(personResultat);
+                
+            }
+            
+            
+
+           
+        }
+        //selber erstellen
 	}
 }
