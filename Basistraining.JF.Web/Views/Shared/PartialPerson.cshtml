@@ -1,0 +1,15 @@
+﻿@model Basistraining.JF.Web.Models.PersonViewModel
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Fullname</th>
+    </tr>
+    @foreach (var p in Model.PersonenListe)
+    {
+        <tr>
+            <td>@p.Id.ToString()</td>
+            <td>@p.FullName</td>
+        </tr>
+    }
+</table>
